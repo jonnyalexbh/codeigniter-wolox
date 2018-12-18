@@ -9,7 +9,8 @@ class Home extends CI_Controller {
   */
 	public function index()
 	{
-		echo "showing home";
+    $data['title'] = 'title home';
+		$this->load->view('home', $data);
   }
   
   /**
