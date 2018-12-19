@@ -22,4 +22,14 @@ class User extends CI_Controller
         $users = $this->m->all();
         $this->load->view('users/index', compact('users'));
     }
+
+    /**
+     * show
+     *
+     */
+    public function show($id)
+    {
+      $user = $this->m->find($id);
+      $this->load->view('users/show', compact('user'));
+    }
 }
