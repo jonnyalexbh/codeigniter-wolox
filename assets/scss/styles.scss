@@ -1,3 +1,18 @@
-.title {
-  color: $blue;
+#table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#table td,
+#table th {
+  border: 1px solid rgba($black, 0.1);
+  padding: 8px;
+}
+
+#table th {
+  background-color: $green;
+  color: $white;
+  padding-bottom: 12px;
+  padding-top: 12px;
+  text-align: left;
 }
