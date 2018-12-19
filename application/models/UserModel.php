@@ -23,6 +23,24 @@ class UserModel extends CI_Model
     }
 
     /**
+     * create
+     *
+     */
+    public function create()
+    {
+        $data = array(
+            'name' => $this->input->post('name'),
+            'email' => $this->input->post('email'),
+            'phone' => $this->input->post('phone'),
+        );
+
+        $this->db->insert('users', $data);
+        $last_id = $this->db->insert_id();
+
+        return $last_id;
+    }
+
+    /**
      * find
      *
      */

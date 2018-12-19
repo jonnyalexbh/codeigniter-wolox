@@ -13,6 +13,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 </head>
 
 <body>
+  <a href="<?=site_url('user/create');?>">Add User</a><br><br>
 <table id="table">
   <thead>
     <tr>
@@ -30,7 +31,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
       <td><?php echo $user->name ?></td>
       <td><?php echo $user->email ?></td>
       <td><?php echo $user->phone ?></td>
-      <td><a href="<?= site_url('user/show/'. $user->id); ?>">See</a></td>
+      <td><a href="<?=site_url('user/show/' . $user->id);?>">See</a></td>
       <td>Edit</td>
       <td>Destroy</td>
     </tr>

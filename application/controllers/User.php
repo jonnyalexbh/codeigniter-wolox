@@ -24,12 +24,33 @@ class User extends CI_Controller
     }
 
     /**
+     * create
+     *
+     */
+    public function create()
+    {
+        $this->load->helper('form');
+        $this->load->view('users/create');
+    }
+
+    /**
+     * store
+     *
+     */
+    public function store()
+    {
+        $this->m->create();
+        $this->session->set_flashdata('success', 'user added correctly');
+        redirect('user/create', 'refresh');
+    }
+
+    /**
      * show
      *
      */
     public function show($id)
     {
-      $user = $this->m->find($id);
-      $this->load->view('users/show', compact('user'));
+        $user = $this->m->find($id);
+        $this->load->view('users/show', compact('user'));
     }
 }
