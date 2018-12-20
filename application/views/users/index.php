@@ -33,7 +33,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
       <td><?php echo $user->phone ?></td>
       <td><a href="<?=site_url('user/show/' . $user->id);?>">See</a></td>
       <td>Edit</td>
-      <td>Destroy</td>
+      <td><a href="<?=site_url('user/destroy/' . $user->id);?>">Destroy</a></td>
     </tr>
   </tbody>
   <?php }?>

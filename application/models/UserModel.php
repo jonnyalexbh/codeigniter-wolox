@@ -52,4 +52,14 @@ class UserModel extends CI_Model
         return $user->row_array();
 
     }
+
+    /**
+     * destroy
+     *
+     */
+    public function destroy($id)
+    {
+        $this->db->where("id", $id);
+        $this->db->delete("users");
+    }
 }

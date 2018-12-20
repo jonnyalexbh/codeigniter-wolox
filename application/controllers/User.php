@@ -53,4 +53,14 @@ class User extends CI_Controller
         $user = $this->m->find($id);
         $this->load->view('users/show', compact('user'));
     }
+
+    /**
+     * destroy
+     *
+     */
+    public function destroy($id)
+    {
+        $this->m->destroy($id);
+        redirect('user/index');
+    }
 }
