@@ -41,7 +41,7 @@ class User extends CI_Controller
     {
         $this->m->create();
         $this->session->set_flashdata('success', 'user added correctly');
-        redirect('user/create', 'refresh');
+        redirect('user/index', 'refresh');
     }
 
     /**
@@ -55,12 +55,35 @@ class User extends CI_Controller
     }
 
     /**
+     * edit
+     *
+     */
+    public function edit($id)
+    {
+        $this->load->helper('form');
+        $user = $this->m->find($id);
+        $this->load->view('users/edit', compact('user'));
+    }
+
+    /**
+     * update
+     *
+     */
+    public function update()
+    {
+        $this->m->update($this->input->post('id'));
+        $this->session->set_flashdata('success', 'user updated correctly');
+        redirect('user/index', 'refresh');
+    }
+
+    /**
      * destroy
      *
      */
     public function destroy($id)
     {
         $this->m->destroy($id);
-        redirect('user/index');
+        $this->session->set_flashdata('success', 'user successfully deleted');
+        redirect('user/index', 'refresh');
     }
 }

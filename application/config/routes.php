@@ -55,6 +55,6 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['users'] = 'user/index';
 $route['user/show/:id'] = 'user/show';
+$route['user/edit/:id'] = 'user/edit';
 $route['user/create'] = 'user/create';
-
 $route['user/destroy'] = 'user/destroy';

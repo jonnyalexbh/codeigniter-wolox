@@ -13,13 +13,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 </head>
 
 <body>
-<h2><?=$user['name'];?></h2>
+    <h2><?=$user->name;?></h2>
     <p>
-      <?=$user['id'];?> <br>
-      <?=$user['email'];?> <br>
-      <?=$user['phone'];?> <br>
+      <?=$user->id;?> <br>
+      <?=$user->email;?> <br>
+      <?=$user->phone;?> <br>
     </p>
-    <a href="<?= site_url('users'); ?>">return</a>
+    <a href="<?=site_url('users');?>">return</a>
 </body>
 
 </html>

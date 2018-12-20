@@ -13,18 +13,19 @@ defined('BASEPATH') or exit('No direct script access allowed');
 </head>
 
 <body>
-  <h2>Add</h2>
-  <?php echo form_open('user/store'); ?>
+  <h2>Edit</h2>
+  <?php echo form_open('user/update'); ?>
   <label for="name">Name</label>
-    <input type="input" name="name" /><br />
+    <input type="hidden" name="id" value="<?=$user->id?>" >
+    <input type="input" name="name" value="<?=$user->name?>" /><br />
 
     <label for="email">Email</label>
-    <input type="input" name="email" /><br />
+    <input type="input" name="email" value="<?=$user->email?>" /><br />
 
     <label for="phone">Phone</label>
-    <input type="input" name="phone" /><br />
+    <input type="input" name="phone" value="<?=$user->phone?>" /><br />
 
-    <input type="submit" name="submit" value="Create user" />
+    <input type="submit" name="submit" value="Update user" />
     <a href="<?=site_url('users');?>">return</a>
   </form>
 </body>

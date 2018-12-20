@@ -14,6 +14,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 <body>
   <a href="<?=site_url('user/create');?>">Add User</a><br><br>
+  <?php
+if (isset($_SESSION['success'])) {
+    echo $_SESSION['success'];
+}
+?>
 <table id="table">
   <thead>
     <tr>
@@ -32,7 +37,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
       <td><?php echo $user->email ?></td>
       <td><?php echo $user->phone ?></td>
       <td><a href="<?=site_url('user/show/' . $user->id);?>">See</a></td>
-      <td>Edit</td>
+      <td><a href="<?=site_url('user/edit/' . $user->id);?>">Edit</a></td>
       <td><a href="<?=site_url('user/destroy/' . $user->id);?>">Destroy</a></td>
     </tr>
   </tbody>

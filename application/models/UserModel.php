@@ -47,10 +47,23 @@ class UserModel extends CI_Model
     public function find($id)
     {
         $this->db->where('id', $id);
+        return $this->db->get('users')->row();
+    }
 
-        $user = $this->db->get('users');
-        return $user->row_array();
+    /**
+     * update
+     *
+     */
+    public function update($id)
+    {
+        $user = array(
+            'name' => $this->input->post('name'),
+            'email' => $this->input->post('email'),
+            'phone' => $this->input->post('phone'),
+        );
 
+        $this->db->where("id", $id);
+        $this->db->update("users", $user);
     }
 
     /**
