@@ -20,7 +20,9 @@ class User extends CI_Controller
     public function index()
     {
         $users = $this->m->all();
-        $this->load->view('users/index', compact('users'));
+
+        $this->template->page_title = 'Users';
+        $this->template->load('default', 'users/index', compact('users'));
     }
 
     /**
