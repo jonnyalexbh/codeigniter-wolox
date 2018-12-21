@@ -1,0 +1,28 @@
+{
+  "name": "codeigniter-wolox",
+  "version": "1.0.0",
+  "description": "What is CodeIgniter ###################",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonnyalexbh/codeigniter-wolox.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonnyalexbh/codeigniter-wolox/issues"
+  },
+  "homepage": "https://github.com/jonnyalexbh/codeigniter-wolox#readme",
+  "dependencies": {
+    "stylelint": "^9.9.0",
+    "stylelint-config-wolox": "^1.0.5",
+    "stylelint-no-indistinguishable-colors": "^1.2.1",
+    "stylelint-scss": "^3.4.2"
+  }
+}

@@ -19,7 +19,7 @@ if (isset($_SESSION['success'])) {
     echo $_SESSION['success'];
 }
 ?>
-<table id="table">
+<table class="tbl-green">
   <thead>
     <tr>
       <th>ID</th>
