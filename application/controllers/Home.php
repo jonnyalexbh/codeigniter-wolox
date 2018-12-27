@@ -1,69 +1,88 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Home extends CI_Controller {
+use Rollbar\Payload\Level;
+use Rollbar\Rollbar;
 
-  /**
-  * index
-  *
-  */
-	public function index()
-	{
-    $data['title'] = 'title home';
-		$this->load->view('home', $data);
-  }
-  
-  /**
-  * create
-  *
-  */
-  public function create()
-  {
-    echo 'showing create';
-  }
+class Home extends CI_Controller
+{
+    /**
+     * __construct
+     *
+     */
+    public function __construct()
+    {
+        Rollbar::init(array(
+            'access_token' => getenv('ROLLBAR_TOKEN'),
+            'environment' => ENVIRONMENT,
+        ));
 
-  /**
-  * store
-  *
-  */
-  public function store()
-  {
-    echo 'showing store';
-  }
+        parent::__construct();
+    }
 
-  /**
-  * show
-  *
-  */
-  public function show()
-  {
-    echo 'showing show';
-  }
+    /**
+     * index
+     *
+     */
+    public function index()
+    {
+        // Rollbar::log(Level::WARNING, 'testing from codeigniter framework');
 
-  /**
-  * edit
-  *
-  */
-  public function edit()
-  {
-    echo 'showing edit';
-  }
+        $data['title'] = 'title home';
+        $this->load->view('home', $data);
+    }
 
-  /**
-  * update
-  *
-  */
-  public function update()
-  {
-    echo 'showing update';
-  }
+    /**
+     * create
+     *
+     */
+    public function create()
+    {
+        echo 'showing create';
+    }
 
-  /**
-  * destroy
-  *
-  */
-  public function destroy()
-  {
-    echo 'showing destroy';
-  }
+    /**
+     * store
+     *
+     */
+    public function store()
+    {
+        echo 'showing store';
+    }
+
+    /**
+     * show
+     *
+     */
+    public function show()
+    {
+        echo 'showing show';
+    }
+
+    /**
+     * edit
+     *
+     */
+    public function edit()
+    {
+        echo 'showing edit';
+    }
+
+    /**
+     * update
+     *
+     */
+    public function update()
+    {
+        echo 'showing update';
+    }
+
+    /**
+     * destroy
+     *
+     */
+    public function destroy()
+    {
+        echo 'showing destroy';
+    }
 }
