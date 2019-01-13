@@ -25,7 +25,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <input type="input" name="phone" /><br />
 
     <input type="submit" name="submit" value="Create user" />
-    <a href="<?=site_url('users');?>">return</a>
+    <a href="<?=base_url('users');?>">return</a>
   </form>
 </body>
 

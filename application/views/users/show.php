@@ -19,7 +19,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
       <?=$user->email;?> <br>
       <?=$user->phone;?> <br>
     </p>
-    <a href="<?=site_url('users');?>">return</a>
+    <a href="<?=base_url('users');?>">return</a>
 </body>
 
 </html>

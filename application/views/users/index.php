@@ -21,9 +21,9 @@ if (isset($_SESSION['success'])) {
       <td><?= $user->name ?></td>
       <td><?= $user->email ?></td>
       <td><?= $user->phone ?></td>
-      <td><a href="<?=site_url('user/show/' . $user->id);?>">See</a></td>
-      <td><a href="<?=site_url('user/edit/' . $user->id);?>">Edit</a></td>
-      <td><a href="<?=site_url('user/destroy/' . $user->id);?>">Destroy</a></td>
+      <td><a href="<?=base_url('user/show/' . $user->id);?>">See</a></td>
+      <td><a href="<?=base_url('user/edit/' . $user->id);?>">Edit</a></td>
+      <td><a href="<?=base_url('user/destroy/' . $user->id);?>">Destroy</a></td>
     </tr>
   </tbody>
   <?php } ?>
