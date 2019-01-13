@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => 'root',
-	'database' => 'codeigniter',
+	'hostname' => 'db4free.net',
+	'username' => 'laraheru_90',
+	'password' => 'Larapass+65',
+	'database' => 'laravel5p6',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
