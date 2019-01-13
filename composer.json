@@ -12,7 +12,6 @@
 	},
 	"require": {
 		"php": ">=5.3.7",
-		"vlucas/phpdotenv": "^2.5",
 		"rollbar/rollbar": "^1.7"
 	},
 	"suggest": {
